@@ -7,6 +7,7 @@ header{
     position: absolute;
     width: 100%;
     background-color: #1B426D;
+    z-index: 1;
 }
 
 #logo{
@@ -45,8 +46,7 @@ nav ul li a:hover{
 }
 
 .video-cover{
-    top: 48px;
-    z-index: -1;
+    padding-top: 48px;
 }
 
 video {
@@ -68,6 +68,33 @@ video {
     font-size: 3em;
 }
 
-.content {
+.title{
+    font-size: 2em;
+}
+
+.text-underline{
+    text-decoration: underline solid 2px;
+}
+
+#principal{
     padding: 0 10% 0 10%;
+    background-color: #cdcdcd;
+    margin-top: -5px;
+}
+
+#principal .title{
+    padding: 20px 0 20px 0;
+}
+
+#principal p{
+    padding-bottom: 10px;
+}
+
+#principal p:last-child{
+    padding-bottom: 20px;
+}
+
+#reasons{
+    padding: 0 10% 0 10%;
+    background-color: #b1b1b1;
 }
