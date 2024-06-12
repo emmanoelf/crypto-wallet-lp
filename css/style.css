@@ -46,7 +46,6 @@ nav ul li a:hover{
 
 .video-cover{
     top: 48px;
-    position: relative;
     z-index: -1;
 }
 
@@ -56,19 +55,19 @@ video {
     max-height: 300px;
 }
 
-.container {
-    margin: 0 auto;
-}
-
 .overlay{
     text-align: center;
 }
 
 .overlay h1{
-    top: 40%;
+    top: 15%;
     left: 0;
     right: 0;
     color: #fff;
     position: absolute;
     font-size: 3em;
+}
+
+.content {
+    padding: 0 10% 0 10%;
 }
