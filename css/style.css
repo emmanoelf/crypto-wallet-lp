@@ -70,6 +70,7 @@ video {
 
 .title{
     font-size: 2em;
+    padding: 20px 0 20px 0;
 }
 
 .text-underline{
@@ -97,4 +98,17 @@ video {
 #reasons{
     padding: 0 10% 0 10%;
     background-color: #b1b1b1;
+}
+
+#reasons .icon{
+    display: block;
+    float: left;
+}
+
+.text-bold{
+    font-weight: bold;;
+}
+
+#reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye{
+    padding-bottom: 25px;
 }
