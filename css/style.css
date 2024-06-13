@@ -126,8 +126,22 @@ video {
     max-width: 200px;
 }
 
-blockquote {
+#hayek blockquote {
     font: 14px/22px normal helvetica, sans-serif;
     padding-left: 15px;
     border-left: 3px solid #ccc;
-  }
+}
+
+#hayek .delimiter{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+#contact{
+    padding: 0 10% 0 10%;
+    background-color: #cdcdcd;
+}
