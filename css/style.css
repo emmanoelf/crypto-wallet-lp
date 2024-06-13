@@ -145,3 +145,22 @@ video {
     padding: 0 10% 0 10%;
     background-color: #cdcdcd;
 }
+
+input[type=text], textarea{
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+}
+
+textarea{
+    width: 50%;
+    resize: none;
+    height: 100px;
+}
+
+#contact:last-child{
+    padding-bottom: 20px;
+}
