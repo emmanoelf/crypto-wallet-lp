@@ -87,11 +87,11 @@ video {
     padding: 20px 0 20px 0;
 }
 
-#principal p{
+#principal p, #hayek p{
     padding-bottom: 10px;
 }
 
-#principal p:last-child{
+#principal p:last-child, #hayek p:last-child{
     padding-bottom: 20px;
 }
 
@@ -112,3 +112,22 @@ video {
 #reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye{
     padding-bottom: 25px;
 }
+
+#hayek{
+    padding: 0 10% 0 10%;
+}
+
+#hayek .col-50{
+    width: 50%;
+    float: left;
+}
+
+#hayek .lock-width{
+    max-width: 200px;
+}
+
+blockquote {
+    font: 14px/22px normal helvetica, sans-serif;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+  }
