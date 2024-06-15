@@ -69,13 +69,15 @@ video {
 }
 
 .overlay h1{
-    font-family: BebasNeue;
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
     top: 15%;
     left: 0;
     right: 0;
     color: #fff;
     position: absolute;
     font-size: 3em;
+    z-index: 1;
+    text-shadow: 5px 5px #000;
 }
 
 .btn-more{
@@ -106,7 +108,6 @@ video {
 
 #principal{
     padding: 0 10% 0 10%;
-    background-color: #cdcdcd;
     margin-top: -5px;
 }
 
@@ -125,6 +126,8 @@ video {
 #reasons{
     padding: 0 10% 0 10%;
     background: url(../img/bg-reasons.png) no-repeat -80px -234px;
+    border: solid 1px 000;
+    box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black;
 }
 
 #reasons .icon{
@@ -212,6 +215,18 @@ footer {
 
 .text-center{
     text-align: center;
+}
+
+.btn-send{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #1B426D;
+    color: #fff;
+}
+
+.btn-send:hover{
+    background-color: #112535;
 }
 
 @media only screen and (min-width: 1366px) {
