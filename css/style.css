@@ -68,6 +68,22 @@ video {
     font-size: 3em;
 }
 
+.btn-more{
+    top: 25%;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #091620;
+    color: #fff;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+.btn-more:hover{
+    background-color: #112535;
+}
+
 .title{
     font-size: 2em;
     padding: 20px 0 20px 0;
@@ -97,12 +113,24 @@ video {
 
 #reasons{
     padding: 0 10% 0 10%;
-    background-color: #b1b1b1;
+    background: url(../img/bg-reasons.png) no-repeat -80px -234px;
 }
 
 #reasons .icon{
     display: block;
     float: left;
+    max-width: 60px;
+    max-height: 48px;
+    padding-right: 10px;
+}
+
+#reasons .title, #reasons p{
+    color: #fff;
+}
+
+#reasons p{
+    margin-top: 5px;
+    padding-left: 80px;
 }
 
 .text-bold{
@@ -168,4 +196,14 @@ textarea{
 footer {
     padding: 20px 0;
     text-align: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+@media only screen and (min-width: 1366px) {
+    #reasons div{
+        margin-left: 50%;
+    }
 }
