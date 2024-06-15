@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
 header{
     position: absolute;
     width: 100%;
@@ -60,6 +69,7 @@ video {
 }
 
 .overlay h1{
+    font-family: BebasNeue;
     top: 15%;
     left: 0;
     right: 0;
@@ -85,6 +95,7 @@ video {
 }
 
 .title{
+    font-family: BebasNeue;
     font-size: 2em;
     padding: 20px 0 20px 0;
 }
@@ -148,6 +159,7 @@ video {
 #hayek .col-50{
     width: 50%;
     float: left;
+    padding: 10px 0 25px 0;
 }
 
 #hayek .lock-width{
