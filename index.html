@@ -10,12 +10,12 @@
     <body>
         <header>
             <div id="logo">
-                <h1><a href="#">Personal Crypto wallet</a></h1>
+                <h1><a href="#home">Personal Crypto wallet</a></h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#home" onclick="scrollTo(home)">Home</a></li>
+                    <li><a href="#contact" onclick="scrollTo(contact)">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -23,7 +23,7 @@
         <section class="video-cover">
             <div class="overlay">
                 <h1>Uma nova forma de gerenciar seus criptoativos</h1>
-                <button type="button" class="btn-more">Saiba mais</button>
+                <a href="#principal" onclick="scrollTo(reasons)"><button type="button" class="btn-more">Saiba mais</button></a>
             </div>
             <video autoplay muted loop class="back-video">
                 <source src="./video/background.mp4" type="video/mp4">
@@ -92,11 +92,12 @@
                 <h1 class="title">Entre em contato</h1>
                 <form>
                     <label for="name">Nome</label>
-                    <input type="text" id="name" placeholder="Insira seu nome"/>
+                    <input type="text" id="name" placeholder="Insira seu nome" required/>
                     <label for="email">E-mail</label>
-                    <input type="text" id="email" placeholder="Insira seu e-mail"/>
+                    <input type="text" id="email" placeholder="Insira seu e-mail" required onfocusout="validateEmail(this)"/>
+                    <p id="result-email"></p>
                     <label for="message">Mensagem</label>
-                    <textarea id="message" placeholder="Insira sua mensagem"></textarea>
+                    <textarea id="message" placeholder="Insira sua mensagem" required></textarea>
                     <button type="button" class="btn-send">Enviar</button>
                 </form>
             </section>

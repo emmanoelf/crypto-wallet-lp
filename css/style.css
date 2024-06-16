@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -227,6 +231,15 @@ footer {
 
 .btn-send:hover{
     background-color: #112535;
+}
+
+.valid-email, .invalid-email{
+    margin: 10px 0 10px 0;
+    color: #049f04;
+}
+
+.invalid-email{
+    color: #ff0000;
 }
 
 @media only screen and (min-width: 1366px) {
