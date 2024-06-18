@@ -98,8 +98,9 @@
                     <p id="result-email"></p>
                     <label for="message">Mensagem</label>
                     <textarea id="message" placeholder="Insira sua mensagem" required></textarea>
-                    <button type="button" class="btn-send">Enviar</button>
+                    <button type="button" class="btn-send" type="submit" id="send-form" onclick="validateForm()">Enviar</button>
                 </form>
+                <div id="toast"></div>
             </section>
         </main>
         <footer>

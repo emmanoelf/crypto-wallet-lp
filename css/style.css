@@ -233,6 +233,10 @@ footer {
     background-color: #112535;
 }
 
+.btn-send:disabled{
+    background-color: #3c4652;
+}
+
 .valid-email, .invalid-email{
     margin: 10px 0 10px 0;
     color: #049f04;
@@ -240,6 +244,36 @@ footer {
 
 .invalid-email{
     color: #ff0000;
+}
+
+#toast {
+    position: fixed;
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #125b32;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    left: 50%;
+    bottom: 30px;
+  }
+  
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+  
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
 }
 
 @media only screen and (min-width: 1366px) {
