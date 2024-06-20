@@ -281,3 +281,84 @@ footer {
         margin-left: 50%;
     }
 }
+
+@media only screen and (min-width: 679px) and (max-width: 773px){
+    .overlay h1{
+        top: 15%;
+    }
+
+    .btn-more{
+        top: 35%;
+        font-size: 1em;
+        left: 45%
+    }
+}
+
+@media only screen and (min-width: 522px) and (max-width: 678px){
+    .video-cover{
+        padding-top: 94px;
+    }
+
+    .overlay h1{
+        top: 25%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 35%;
+        font-size: 1em;
+        left: 40%
+    }
+}
+
+@media only screen and (max-width: 679px){
+    .video-cover{
+        padding-top: 48px;
+    }
+}
+
+@media only screen and (min-device-width: 330px) and (max-device-width: 679px){
+    .video-cover{
+        padding-top: 94px;
+    }
+    
+    nav ul li a{
+        width: 136px;
+    }
+
+    .overlay h1{
+        top: 15%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 25%;
+        font-size: 1em;
+        left: 40%
+    }
+
+    #hayek .col-50{
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 337px) and (max-width: 521px){
+    .video-cover{
+        padding-top: 94px;
+    }
+
+    .overlay h1{
+        top: 20%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 33%;
+        font-size: 1em;
+        left: 35%
+    }
+
+    #hayek .col-50{
+        float: none;
+    }
+}
