@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crypto wallet</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <h1><a href="#home">Personal Crypto wallet</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="scrollTo(home)">Home</a></li>
+                    <li><a href="#contact" onclick="scrollTo(contact)">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="video-cover">
+            <div class="overlay">
+                <h1>Uma nova forma de gerenciar seus criptoativos</h1>
+                <a href="#principal" onclick="scrollTo(reasons)"><button type="button" class="btn-more">Saiba mais</button></a>
+            </div>
+            <video autoplay muted loop class="back-video">
+                <source src="./video/background.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <main>
+            <section id="principal">
+                <h1 class="title">Bem-vindo ao futuro da gestão de criptoativos!</h1>
+                <p>Nossa plataforma foi criada para revolucionar a maneira como você acompanha, analisa e gerencia seu portfólio de criptomoedas.</p>
+                <p>Deixe para trás as complicações das planilhas manuais e descubra uma solução poderosa e intuitiva que elevará seu controle financeiro a um novo patamar.</p>
+            </section>
+
+            <section id="reasons">
+                <h1 class="title text-center">Por que escolher nosso software?</h1>
+                <div class="diversification">
+                    <img src="./img/wallet.png" class="icon" alt="Ícone de uma carteira" />
+                    <p class="text-bold">Diversificação</p>
+                    <p>Criação de várias carteiras para diferentes tipos de estratégias</p>
+                </div>
+
+                <div class="over-nine-thousand">
+                    <img src="./img/over-nine-thousand.png" class="icon" alt="Ícone de contador do poder do Vegeta" />
+                    <p class="text-bold">Mais de 8.000</p>
+                    <p>Suporte a mais de 8.000 criptoativos</p>
+                </div>
+
+                <div class="real-time">
+                    <img src="./img/real-time.png" class="icon" alt="Ícone ilustrando que é em tempo real" />
+                    <p class="text-bold">Real-time</p>
+                    <p>Visualize seus lucros em tempo real</p>
+                </div>
+                
+                <div class="easy">
+                    <img src="./img/easy.png" class="icon" alt="Ícone ilustrando que é de fácil entendimento" />
+                    <p class="text-bold">Fácil entendimento</p>
+                    <p>Navegue com facilidade e gerencie seus criptoativos com nossa interface amigável</p>
+                </div>
+
+                <div class="keep-an-eye">
+                    <img src="./img/keep-an-eye.png" class="icon" alt="Ícone ilustrando um olho" />
+                    <p class="text-bold">Fique de olho</p>
+                    <p>Newsletter semanal com resumo dos acontecimentos de sua(s) carteira(s)</p>
+                </div>
+            </section>
+            
+            <section id="hayek">
+                <h1 class="title">Uma motivação a mais...</h1>
+                <p>Friedrich August von Hayek foi um economista austríaco e é considerado um dos fundadores da escola austríaca de pensamento econômico.</p>
+                <p>Em um vídeo de 1984, Hayek é questionado sobre a necessidade de uma reforma monetária e é então que ele responde o seguinte:</p>
+                <div class="delimiter">
+                    <div class="col-50">
+                        <img src="./img/f-hayek.jpg" class="lock-width" alt="Foto do economista austríaco-britânico Friedrich Hayek" />
+                    </div>
+                    <div class="col-50">
+                        <blockquote>
+                            Eu não acredito que teremos um bom dinheiro de novo antes de tirá-lo das mãos do governo, isto é, não podemos tirá-los violentamente das mãos do governo, tudo o que podemos fazer é por algum o caminho indireto introduzir algo que eles não podem parar.
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <div class="clear"></div>
+
+            <section id="contact">
+                <h1 class="title">Entre em contato</h1>
+                <form>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Insira seu nome" required/>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" placeholder="Insira seu e-mail" required onfocusout="validateEmail(this)"/>
+                    <p id="result-email"></p>
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" placeholder="Insira sua mensagem" required></textarea>
+                    <button type="button" class="btn-send" type="submit" id="send-form" onclick="validateForm()">Enviar</button>
+                </form>
+                <div id="toast"></div>
+            </section>
+        </main>
+        <footer>
+            <p>2024 -  Personal Crypto Wallet</p>
+            <p>&copy; Todos os direitos reservados</p>
+        </footer>
+    </body>
+</html>

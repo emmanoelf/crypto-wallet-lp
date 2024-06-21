@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    background-color: #1B426D;
+    z-index: 1;
+}
+
+#logo{
+    margin: 0 10% 0 10%;
+}
+
+#logo h1 {
+    float: left;
+}
+
+#logo a {
+    width: 275px;
+    height: 46px;
+    text-indent: -9999px;
+    display: block;
+    background: url(../img/logo.png) no-repeat;
+}
+
+nav ul li{
+    float: left;
+    list-style-type: none;
+}
+
+nav ul li a{
+    width: 130px;
+    color: #fff;
+    padding: 15px 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+}
+
+nav ul li a:hover{
+    background-color: #052242;
+}
+
+.video-cover{
+    padding-top: 48px;
+}
+
+video {
+    width: 100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+.overlay{
+    text-align: center;
+}
+
+.overlay h1{
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
+    top: 15%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    position: absolute;
+    font-size: 3em;
+    z-index: 1;
+    text-shadow: 5px 5px #000;
+}
+
+.btn-more{
+    top: 25%;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #091620;
+    color: #fff;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+.btn-more:hover{
+    background-color: #112535;
+}
+
+.title{
+    font-family: BebasNeue;
+    font-size: 2em;
+    padding: 20px 0 20px 0;
+}
+
+.text-underline{
+    text-decoration: underline solid 2px;
+}
+
+#principal{
+    padding: 0 10% 0 10%;
+    margin-top: -5px;
+}
+
+#principal .title{
+    padding: 20px 0 20px 0;
+}
+
+#principal p, #hayek p{
+    padding-bottom: 10px;
+}
+
+#principal p:last-child, #hayek p:last-child{
+    padding-bottom: 20px;
+}
+
+#reasons{
+    padding: 0 10% 0 10%;
+    background: url(../img/bg-reasons.png) no-repeat -80px -234px;
+    border: solid 1px 000;
+    box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black;
+}
+
+#reasons .icon{
+    display: block;
+    float: left;
+    max-width: 60px;
+    max-height: 48px;
+    padding-right: 10px;
+}
+
+#reasons .title, #reasons p{
+    color: #fff;
+}
+
+#reasons p{
+    margin-top: 5px;
+    padding-left: 80px;
+}
+
+.text-bold{
+    font-weight: bold;;
+}
+
+#reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye{
+    padding-bottom: 25px;
+}
+
+#hayek{
+    padding: 0 10% 0 10%;
+}
+
+#hayek .col-50{
+    width: 50%;
+    float: left;
+    padding: 10px 0 25px 0;
+}
+
+#hayek .lock-width{
+    max-width: 200px;
+}
+
+#hayek blockquote {
+    font: 14px/22px normal helvetica, sans-serif;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}
+
+#hayek .delimiter{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+#contact{
+    padding: 0 10% 0 10%;
+    background-color: #cdcdcd;
+}
+
+input[type=text], textarea{
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+}
+
+textarea{
+    width: 50%;
+    resize: none;
+    height: 100px;
+}
+
+#contact:last-child{
+    padding-bottom: 20px;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.btn-send{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #1B426D;
+    color: #fff;
+}
+
+.btn-send:hover{
+    background-color: #112535;
+}
+
+.btn-send:disabled{
+    background-color: #3c4652;
+}
+
+.valid-email, .invalid-email{
+    margin: 10px 0 10px 0;
+    color: #049f04;
+}
+
+.invalid-email{
+    color: #ff0000;
+}
+
+#toast {
+    position: fixed;
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #125b32;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    left: 50%;
+    bottom: 30px;
+  }
+  
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+  
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+@media only screen and (min-width: 1366px) {
+    #reasons div{
+        margin-left: 50%;
+    }
+}
+
+@media only screen and (min-width: 679px) and (max-width: 773px){
+    .overlay h1{
+        top: 15%;
+    }
+
+    .btn-more{
+        top: 35%;
+        font-size: 1em;
+        left: 45%
+    }
+}
+
+@media only screen and (min-width: 522px) and (max-width: 678px){
+    .video-cover{
+        padding-top: 94px;
+    }
+
+    .overlay h1{
+        top: 25%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 35%;
+        font-size: 1em;
+        left: 40%
+    }
+}
+
+@media only screen and (max-width: 679px){
+    .video-cover{
+        padding-top: 48px;
+    }
+}
+
+@media only screen and (min-device-width: 330px) and (max-device-width: 679px){
+    .video-cover{
+        padding-top: 94px;
+    }
+    
+    nav ul li a{
+        width: 136px;
+    }
+
+    .overlay h1{
+        top: 15%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 25%;
+        font-size: 1em;
+        left: 40%
+    }
+
+    #hayek .col-50{
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 337px) and (max-width: 521px){
+    .video-cover{
+        padding-top: 94px;
+    }
+
+    .overlay h1{
+        top: 20%;
+        font-size: 2em;
+    }
+
+    .btn-more{
+        top: 33%;
+        font-size: 1em;
+        left: 35%
+    }
+
+    #hayek .col-50{
+        float: none;
+    }
+}
