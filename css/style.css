@@ -24,10 +24,6 @@ header{
     justify-content: space-around;
 }
 
-#logo{
-    margin: 0 10% 0 10%;
-}
-
 #logo h1 {
     float: left;
 }
@@ -38,6 +34,10 @@ header{
     text-indent: -9999px;
     display: block;
     background: url(../img/logo.png) no-repeat;
+}
+
+ul{
+    padding-left: 0rem;
 }
 
 nav ul li{
@@ -98,7 +98,7 @@ video{
 
 .title{
     font-family: BebasNeue;
-    font-size: 2em;
+    font-size: 2rem;
     padding: 20px 0 20px 0;
 }
 
@@ -133,7 +133,7 @@ video{
 #reasons .icon{
     display: block;
     float: left;
-    max-width: 60px;
+    max-width: 48px;
     max-height: 48px;
     padding-right: 10px;
 }
@@ -152,6 +152,8 @@ video{
 }
 
 #reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye{
+    display: flex;
+    align-items: center;
     padding-bottom: 25px;
 }
 
@@ -167,6 +169,7 @@ video{
 
 #hayek .lock-width{
     max-width: 200px;
+    margin: 0 10px 0 10px;
 }
 
 #hayek blockquote {
@@ -178,6 +181,9 @@ video{
 #hayek .delimiter{
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
 }
 
 .clear{
@@ -273,30 +279,31 @@ footer {
 }
 
 @media only screen and (min-width: 1366px) {
-    #reasons div{
+    #reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye {
         margin-left: 50%;
     }
 }
 
 @media only screen and (min-width: 679px) and (max-width: 773px){
     .btn-more{
-        top: 18vh;
+        margin-top: 18vh;
     }
 }
 
 @media only screen and (min-width: 522px) and (max-width: 678px){
     .video-cover h1{
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .btn-more{
-        top: 17vh;
+        font-size: 0.8rem;
+        margin-top: 12vh;
     }
 }
 
 @media only screen and (min-device-width: 330px) and (max-device-width: 679px){
     .video-cover h1{
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .btn-more{
@@ -309,13 +316,12 @@ footer {
 }
 
 @media only screen and (min-width: 337px) and (max-width: 521px){
-    .overlay h1{
-        top: 20%;
+    .video-cover h1{
         font-size: 2rem;
     }
 
     .btn-more{
-        top: 20vh;
+        margin-top: 12vh;
         font-size: 0.8rem;
     }
 
