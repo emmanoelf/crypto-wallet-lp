@@ -6,7 +6,8 @@
         <title>Crypto wallet</title>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="./css/style.css" />
-        <script src="./js/script.js"></script>
+        <script src="./js/coingecko.js" type="text/javascript" defer></script>
+        <script src="./js/script.js" type="text/javascript" defer></script>
     </head>
     <body>
         <header>
@@ -18,9 +19,30 @@
                 <ul>
                     <li><a href="#home" onclick="scrollTo(home)">Home</a></li>
                     <li><a href="#contact" onclick="scrollTo(contact)">Contato</a></li>
+                    <li><a href="#" id="demo" onclick="showPopup()">Demonstração</a></li>
                 </ul>
             </nav>
         </header>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div class="tabs">
+                    <button class="tablinks" onclick="openTab(event, 'make-contribution-tab')">Adicionar aporte</button>
+                    <button class="tablinks" onclick="openTab(event, 'remove-contribution-tab')">Remover Aporte</button>
+                    <button class="tablinks" onclick="openTab(event, 'profit-loss-tab'); showProfitLoss()">Mostrar Lucro/Prejuízo</button>
+                </div>
+                <div id="make-contribution-tab" class="tabcontent">
+                    
+                </div>
+                <div id="remove-contribution-tab" class="tabcontent">
+                    
+                </div>
+                <div id="profit-loss-tab" class="tabcontent">
+                    
+                </div>
+            </div>
+        </div>
 
         <section class="video-cover">
             <h1>Uma nova forma de gerenciar seus criptoativos</h1>
