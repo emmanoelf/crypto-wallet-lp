@@ -114,12 +114,12 @@ function renderProfitOrLoss(){
     h3.style.fontWeight = 'bold';
     h3.className = 'tab-p title rem-3';
 
-    if(profit_or_loss > 0){
-        h3.textContent = `Você está com lucro de R$ ` + profit_or_loss;
-        h3.style.color = '#125b32';
-    }else{
-        h3.textContent = `Você está com prejuízo de R$ ` + profit_or_loss;
+    if(profit_or_loss < 0 || isNaN(profit_or_loss)){
+        h3.textContent = `Você está com prejuízo de R$ ` + profit_or_loss.toFixed(2);
         h3.style.color = '#ff0000';
+    }else{
+        h3.textContent = `Você está com lucro de R$ ` + profit_or_loss.toFixed(2);
+        h3.style.color = '#125b32';
     }
 
     let h2 = document.createElement('h2');

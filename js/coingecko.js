@@ -24,44 +24,39 @@ async function makeContribution(){
 
     total_contributions += contribution;
     localStorage.setItem("qt_contribution", total_contributions);
-    this.calculateQtSatoshis(actual_value_bitcoin, "sum");
+    this.calculateQtSatoshis(actual_value_bitcoin, "sum", contribution);
 }
 
 async function removeContribution(){
-    const contribution = parseFloat(document.getElementById('remove-contribution').value);
+    const remove_contribution = parseFloat(document.getElementById('remove-contribution').value);
 
     const actual_value_bitcoin = await getValueBitcoin();
 
     let total_contributions = parseFloat(localStorage.getItem("qt_contribution"));
 
-    if(total_contributions >= contribution){
-        this.calculateQtSatoshis(actual_value_bitcoin, "subtract");
-        total_contributions -= contribution;
+    if(total_contributions >= remove_contribution){
+        this.calculateQtSatoshis(actual_value_bitcoin, "subtract", remove_contribution);
+        total_contributions -= remove_contribution;
         return localStorage.setItem("qt_contribution", total_contributions);
     }
 
     console.log("Você não tem saldo suficiente");
 }
 
-function calculateQtSatoshis(actual_value_bitcoin, operation){
-    let qt_contribution = parseFloat(localStorage.getItem("qt_contribution"));
+function calculateQtSatoshis(actual_value_bitcoin, operation, value_operation){
     let qt_satoshis = parseFloat(localStorage.getItem("qt_satoshis"));
-    
-    if(isNaN(qt_contribution)){
-        qt_contribution = 0;
-    }
 
     if(isNaN(qt_satoshis)){
         qt_satoshis = 0;
     }
 
     if(operation === "sum"){
-        qt_satoshis += qt_contribution / actual_value_bitcoin
+        qt_satoshis += value_operation / actual_value_bitcoin
         localStorage.setItem("qt_satoshis", qt_satoshis);
     }
 
     if(operation === "subtract"){
-        qt_satoshis -= qt_contribution / actual_value_bitcoin
+        qt_satoshis -= value_operation / actual_value_bitcoin
         localStorage.setItem("qt_satoshis", qt_satoshis);
     }
     
@@ -77,7 +72,7 @@ function calculateProfitOrLoss(actual_value_bitcoin, qt_satoshis){
 
     const profit_or_loss = (actual_value_bitcoin * qt_satoshis.toFixed(8)) - total_contribution;
 
-    return profit_or_loss.toFixed(2);
+    return profit_or_loss;
 }
 
 async function showProfitLoss(){
