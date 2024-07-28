@@ -88,7 +88,7 @@ video{
     background-color: #091620;
     color: #fff;
     font-size: 1.2rem;
-    margin-top: 10vh;
+    margin-top: 17vh;
     z-index: 1;
 }
 
@@ -100,6 +100,7 @@ video{
     font-family: BebasNeue;
     font-size: 2rem;
     padding: 20px 0 20px 0;
+    color: #000;
 }
 
 .text-underline{
@@ -268,6 +269,7 @@ footer {
     padding: 20px;
     left: 50%;
     bottom: 30px;
+    z-index: 5;
   }
   
 #toast.show {
@@ -329,7 +331,7 @@ footer {
     }
 
     .btn-more{
-        margin-top: 12vh;
+        margin-top: 17vh;
         font-size: 0.8rem;
     }
 
@@ -465,4 +467,60 @@ footer {
 #profit-loss-tab p{
     list-style: 1.3;
     padding: 10px 0 10px 0;
+}
+
+#theme {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #1B426D;
+    color: white;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+  }
+  
+  #theme:hover {
+    background-color: #555;
+  }
+
+.img-theme{
+    margin-top: 3px;
+    width: 30px;
+}
+
+.contrast p, .contrast h1, .contrast blockquote, .contrast label, .contrast .tab-title, .contrast .title {
+    color: #fff;
+}
+
+.contrast body{
+    background-color: #000;
+}
+
+.contrast header{
+    background-color: #000;
+}
+
+.contrast nav ul li a:hover{
+    background-color: #ccc;
+}
+
+.contrast #theme, .contrast input[type=text], .contrast textarea, .contrast .btn-send{
+    background-color: #000;
+}
+
+.contrast .btn-send:hover{
+    background-color: #242424;
+}
+
+.contrast #contact{
+    background-color: #272727;
+}
+
+.contrast .popup-content{
+    background-color: #272727;
 }

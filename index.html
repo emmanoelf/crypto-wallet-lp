@@ -43,7 +43,6 @@
                 </div>
             </div>
         </div>
-
         <section class="video-cover">
             <h1>Uma nova forma de gerenciar seus criptoativos</h1>
             <a href="#principal" onclick="scrollTo(reasons)" class="btn-more">Saiba mais</a>
@@ -57,6 +56,7 @@
                 <h1 class="title">Bem-vindo ao futuro da gestão de criptoativos!</h1>
                 <p>Nossa plataforma foi criada para revolucionar a maneira como você acompanha, analisa e gerencia seu portfólio de criptomoedas.</p>
                 <p>Deixe para trás as complicações das planilhas manuais e descubra uma solução poderosa e intuitiva que elevará seu controle financeiro a um novo patamar.</p>
+                <button onclick="changeTheme()" id="theme"><img class="img-theme" src="./img/night.png" /></button>
             </section>
 
             <section id="reasons">
@@ -70,7 +70,10 @@
                 </div>
 
                 <div class="over-nine-thousand">
-                    <img src="./img/over-nine-thousand.png" class="icon" alt="Ícone de contador do poder do Vegeta" />
+                    <img src="./img/over-nine-thousand.png" class="icon" alt="Ícone de contador do poder do Vegeta"  id="hover-image"/>
+                    <audio id="hover-audio">
+                        <source src="./audio/mais-de-oito-mil.mp3" type="audio/mpeg" />
+                    </audio>
                     <div>
                         <p class="text-bold">Mais de 8.000</p>
                         <p>Suporte a mais de 8.000 criptoativos</p>

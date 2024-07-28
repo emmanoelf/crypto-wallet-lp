@@ -156,3 +156,27 @@ function renderProfitOrLoss(){
     document.getElementById('profit-loss-tab').appendChild(p_font).appendChild(a_href_fear);
     document.getElementById('profit-loss-tab').appendChild(div).appendChild(img);
 }
+
+function changeTheme(){
+    if(document.body.classList.length > 0){
+        document.body.classList.remove('contrast');
+        document.body.style.background = '#fff';
+        document.getElementById('theme').children.item(0).setAttribute('src', '../img/night.png');
+    }else{
+        document.body.classList.add('contrast');
+        document.body.style.background = '#000';
+        document.getElementById('theme').children.item(0).setAttribute('src', '../img/sun.png');
+        
+    }
+}
+
+const image = document.getElementById('hover-image');
+const audio = document.getElementById('hover-audio');
+
+image.addEventListener('mouseenter', () => {
+    audio.play();
+});
+
+image.addEventListener('mouseleave', () => {
+    audio.pause();
+});
