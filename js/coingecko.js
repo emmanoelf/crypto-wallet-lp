@@ -1,9 +1,7 @@
 async function getValueBitcoin(){
     try{
-        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl', options);
-
+        const response = await fetch('https://young-wave-d1f4.emmanoelf-dev.workers.dev/');
         const actual_value_bitcoin = await response.json();
-
         return actual_value_bitcoin.bitcoin.brl;
     }catch(error){
         console.log(error)
@@ -23,6 +21,11 @@ async function makeContribution(){
     }
 
     total_contributions += contribution;
+
+    const toast = document.getElementById("toast");
+    toast.innerHTML = "Aporte realizado com sucesso!";
+    showToast();
+
     localStorage.setItem("qt_contribution", total_contributions);
     this.calculateQtSatoshis(actual_value_bitcoin, "sum", contribution);
 }
@@ -40,7 +43,10 @@ async function removeContribution(){
         return localStorage.setItem("qt_contribution", total_contributions);
     }
 
-    console.log("Você não tem saldo suficiente");
+    const toast = document.getElementById("toast");
+    toast.style.backgroundColor = "#ff0000";
+    toast.innerHTML = "Você não tem saldo suficiente!";
+    showToast();
 }
 
 function calculateQtSatoshis(actual_value_bitcoin, operation, value_operation){
