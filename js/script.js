@@ -161,11 +161,11 @@ function changeTheme(){
     if(document.body.classList.length > 0){
         document.body.classList.remove('contrast');
         document.body.style.background = '#fff';
-        document.getElementById('theme').children.item(0).setAttribute('src', '../img/night.png');
+        document.getElementById('theme').children.item(0).setAttribute('src', './img/night.png');
     }else{
         document.body.classList.add('contrast');
         document.body.style.background = '#000';
-        document.getElementById('theme').children.item(0).setAttribute('src', '../img/sun.png');
+        document.getElementById('theme').children.item(0).setAttribute('src', './img/sun.png');
         
     }
 }
