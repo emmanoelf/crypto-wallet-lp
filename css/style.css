@@ -17,14 +17,11 @@ body{
 }
 
 header{
-    position: absolute;
     width: 100%;
     background-color: #1B426D;
     z-index: 1;
-}
-
-#logo{
-    margin: 0 10% 0 10%;
+    display: flex;
+    justify-content: space-around;
 }
 
 #logo h1 {
@@ -39,60 +36,59 @@ header{
     background: url(../img/logo.png) no-repeat;
 }
 
+ul{
+    padding-left: 0rem;
+}
+
 nav ul li{
     float: left;
     list-style-type: none;
 }
 
 nav ul li a{
-    width: 130px;
     color: #fff;
     padding: 15px 15px;
     display: block;
     text-decoration: none;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 nav ul li a:hover{
     background-color: #052242;
 }
 
-.video-cover{
-    padding-top: 48px;
-}
-
-video {
+video{
     width: 100%;
     object-fit: cover;
     max-height: 300px;
 }
 
-.overlay{
+.video-cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.video-cover h1{
+    font-family: BebasNeue, Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: absolute;
+    font-size: 3rem;
+    text-shadow: 5px 5px #000;
     text-align: center;
 }
 
-.overlay h1{
-    font-family: BebasNeue, Arial, Helvetica, sans-serif;
-    top: 15%;
-    left: 0;
-    right: 0;
-    color: #fff;
-    position: absolute;
-    font-size: 3em;
-    z-index: 1;
-    text-shadow: 5px 5px #000;
-}
-
 .btn-more{
-    top: 25%;
     position: absolute;
     padding: 10px;
     border-radius: 5px;
     border: solid 1px black;
     background-color: #091620;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    margin-top: 17vh;
     z-index: 1;
 }
 
@@ -102,8 +98,9 @@ video {
 
 .title{
     font-family: BebasNeue;
-    font-size: 2em;
+    font-size: 2rem;
     padding: 20px 0 20px 0;
+    color: #000;
 }
 
 .text-underline{
@@ -137,7 +134,7 @@ video {
 #reasons .icon{
     display: block;
     float: left;
-    max-width: 60px;
+    max-width: 48px;
     max-height: 48px;
     padding-right: 10px;
 }
@@ -156,6 +153,8 @@ video {
 }
 
 #reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye{
+    display: flex;
+    align-items: center;
     padding-bottom: 25px;
 }
 
@@ -171,6 +170,7 @@ video {
 
 #hayek .lock-width{
     max-width: 200px;
+    margin: 0 10px 0 10px;
 }
 
 #hayek blockquote {
@@ -182,6 +182,9 @@ video {
 #hayek .delimiter{
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
 }
 
 .clear{
@@ -221,12 +224,16 @@ footer {
     text-align: center;
 }
 
-.btn-send{
+.btn-send, .btn-remove{
     padding: 10px;
     border-radius: 5px;
     border: solid 1px black;
     background-color: #1B426D;
     color: #fff;
+}
+
+.btn-remove{
+    background-color: #FF0000;
 }
 
 .btn-send:hover{
@@ -235,6 +242,10 @@ footer {
 
 .btn-send:disabled{
     background-color: #3c4652;
+}
+
+.btn-remove:hover{
+    background-color: #a71515;
 }
 
 .valid-email, .invalid-email{
@@ -258,6 +269,7 @@ footer {
     padding: 20px;
     left: 50%;
     bottom: 30px;
+    z-index: 5;
   }
   
 #toast.show {
@@ -277,64 +289,35 @@ footer {
 }
 
 @media only screen and (min-width: 1366px) {
-    #reasons div{
+    #reasons .diversification, .over-nine-thousand, .real-time, .easy, .keep-an-eye {
         margin-left: 50%;
     }
 }
 
 @media only screen and (min-width: 679px) and (max-width: 773px){
-    .overlay h1{
-        top: 15%;
-    }
-
     .btn-more{
-        top: 35%;
-        font-size: 1em;
-        left: 45%
+        margin-top: 18vh;
     }
 }
 
 @media only screen and (min-width: 522px) and (max-width: 678px){
-    .video-cover{
-        padding-top: 94px;
-    }
-
-    .overlay h1{
-        top: 25%;
-        font-size: 2em;
+    .video-cover h1{
+        font-size: 2rem;
     }
 
     .btn-more{
-        top: 35%;
-        font-size: 1em;
-        left: 40%
-    }
-}
-
-@media only screen and (max-width: 679px){
-    .video-cover{
-        padding-top: 48px;
+        font-size: 0.8rem;
+        margin-top: 12vh;
     }
 }
 
 @media only screen and (min-device-width: 330px) and (max-device-width: 679px){
-    .video-cover{
-        padding-top: 94px;
-    }
-    
-    nav ul li a{
-        width: 136px;
-    }
-
-    .overlay h1{
-        top: 15%;
-        font-size: 2em;
+    .video-cover h1{
+        font-size: 2rem;
     }
 
     .btn-more{
-        top: 25%;
         font-size: 1em;
-        left: 40%
     }
 
     #hayek .col-50{
@@ -343,22 +326,201 @@ footer {
 }
 
 @media only screen and (min-width: 337px) and (max-width: 521px){
-    .video-cover{
-        padding-top: 94px;
-    }
-
-    .overlay h1{
-        top: 20%;
-        font-size: 2em;
+    .video-cover h1{
+        font-size: 2rem;
     }
 
     .btn-more{
-        top: 33%;
-        font-size: 1em;
-        left: 35%
+        margin-top: 17vh;
+        font-size: 0.8rem;
     }
 
     #hayek .col-50{
         float: none;
     }
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul li{
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    header{
+        flex-direction: column;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 10vh auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabs button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tab-title, .tab-button, .tab-p{
+    margin: 1rem 0 1rem 0;
+}
+
+.rem-1-5{
+    font-size: 1.5rem;
+}
+
+.rem-3{
+    font-size: 3rem;
+}
+
+.title-tab{
+    padding: 10px 0 5px 0;
+}
+
+#profit-loss-tab p{
+    list-style: 1.3;
+    padding: 10px 0 10px 0;
+}
+
+#theme {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #1B426D;
+    color: white;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+  }
+  
+  #theme:hover {
+    background-color: #555;
+  }
+
+.img-theme{
+    margin-top: 3px;
+    width: 30px;
+}
+
+.contrast p, .contrast h1, .contrast blockquote, .contrast label, .contrast .tab-title, .contrast .title {
+    color: #fff;
+}
+
+.contrast body{
+    background-color: #000;
+}
+
+.contrast header{
+    background-color: #000;
+}
+
+.contrast nav ul li a:hover{
+    background-color: #ccc;
+}
+
+.contrast #theme, .contrast input[type=text], .contrast textarea, .contrast .btn-send{
+    background-color: #000;
+}
+
+.contrast .btn-send:hover{
+    background-color: #242424;
+}
+
+.contrast #contact{
+    background-color: #272727;
+}
+
+.contrast .popup-content{
+    background-color: #272727;
 }
