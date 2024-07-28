@@ -469,6 +469,10 @@ footer {
     padding: 10px 0 10px 0;
 }
 
+.pb-20{
+    padding-bottom: 20px;
+}
+
 #theme {
     position: fixed;
     bottom: 20px;
